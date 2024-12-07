@@ -39,3 +39,40 @@ public:
     }
 
 };
+
+class CaesarDecryptor : public Decryptor {
+private:
+    int m_shift;
+
+public:
+    CaesarDecryptor() : Decryptor("Caesar Cipher"), m_shift(7) {}
+    CaesarDecryptor(int shift) : Decryptor("Caesar Cipher"), m_shift(shift) {}
+
+    ~CaesarDecryptor() {}
+
+    void setShift(int shift) {
+        m_shift = shift;
+    }
+
+    int getShift() {
+        return m_shift;
+    }
+
+    void description() const override {
+        std::cout << "Algorithm: " << m_algorithm << std::endl;
+        std::cout << "Shift: " << m_shift << std::endl;
+    }
+
+    std::string decrypt() override {
+        std::string decrypted = m_data;
+        for (char &c : decrypted) {
+            if (std::isalpha(c)) {
+                char base = std::islower(c) ? 'a' : 'A';
+                c = (c - base - m_shift + 26) % 26 + base;
+            }
+        }
+        m_data = decrypted;
+        return m_data;
+    }
+
+};
