@@ -24,4 +24,8 @@ public:
 
     virtual void description() const = 0;
     virtual std::string decrypt() = 0;
+
+    void clearData() {
+        m_data.clear();
+    }
 };

@@ -8,8 +8,8 @@ private:
     int m_shift;
 
 public:
-    CaesarEncryptor() : Encryptor("Caesar Cipher"), m_shift(7) {}
-    CaesarEncryptor(int shift) : Encryptor("Caesar Cipher"), m_shift(shift) {}
+    CaesarEncryptor() : Encryptor("Caesar cipher"), m_shift(7) {}
+    CaesarEncryptor(int shift) : Encryptor("Caesar cipher"), m_shift(shift) {}
 
     ~CaesarEncryptor() {}
 
@@ -27,6 +27,10 @@ public:
     }
 
     std::string encrypt() override {
+        if (m_shift <= 1 || m_data.empty()) {
+        return m_data;
+        }
+
         std::string encrypted = m_data;
         for (char &c : encrypted) {
             if (std::isalpha(c)) {
@@ -64,6 +68,10 @@ public:
     }
 
     std::string decrypt() override {
+        if (m_shift <= 1 || m_data.empty()) {
+        return m_data;
+        }
+
         std::string decrypted = m_data;
         for (char &c : decrypted) {
             if (std::isalpha(c)) {
