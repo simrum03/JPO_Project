@@ -3,6 +3,7 @@
 #include "Encryptor.hpp"
 #include "Decryptor.hpp"
 
+namespace sr{
 class CaesarEncryptor : public Encryptor {
 private:
     int m_shift;
@@ -21,9 +22,12 @@ public:
         return m_shift;
     }
 
-    void description() const override {
-        std::cout << "Algorithm: " << m_algorithm << std::endl;
-        std::cout << "Shift: " << m_shift << std::endl;
+    std::string description() const override {
+        std::ostringstream oss;
+        oss << "Algorithm: " << m_algorithm << std::endl;
+        oss << "Shift: " << m_shift << std::endl;
+        oss << "Encrypted data: ";
+        return oss.str();
     }
 
     std::string encrypt() override {
@@ -62,9 +66,12 @@ public:
         return m_shift;
     }
 
-    void description() const override {
-        std::cout << "Algorithm: " << m_algorithm << std::endl;
-        std::cout << "Shift: " << m_shift << std::endl;
+    std::string description() const override {
+        std::ostringstream oss;
+        oss << "Algorithm: " << m_algorithm << std::endl;
+        oss << "Shift: " << m_shift << std::endl;
+        oss << "Decrypted data: ";
+        return oss.str();
     }
 
     std::string decrypt() override {
@@ -84,3 +91,4 @@ public:
     }
 
 };
+}

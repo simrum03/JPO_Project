@@ -4,6 +4,7 @@
 #include "Decryptor.hpp"
 #include <vector>
 
+namespace sr{
 class RailFenceEncryptor : public Encryptor {
 private:
     int m_rails;
@@ -22,9 +23,12 @@ public:
         return m_rails;
     }
 
-    void description() const override {
-        std::cout << "Algorithm: " << m_algorithm << std::endl;
-        std::cout << "Number of rails: " << m_rails << std::endl;
+    std::string description() const override {
+        std::ostringstream oss;
+        oss << "Algorithm: " << m_algorithm << std::endl;
+        oss << "Number of rails: " << m_rails << std::endl;
+        oss << "Encrypted data: ";
+        return oss.str();
     }
 
     std::string encrypt() override {
@@ -81,9 +85,12 @@ public:
         return m_rails;
     }
 
-    void description() const override {
-        std::cout << "Algorithm: " << m_algorithm << std::endl;
-        std::cout << "Number of rails: " << m_rails << std::endl;
+    std::string description() const override {
+        std::ostringstream oss;
+        oss << "Algorithm: " << m_algorithm << std::endl;
+        oss << "Number of rails: " << m_rails << std::endl;
+        oss << "Decrypted data: ";
+        return oss.str();
     }
 
     std::string decrypt() override {
@@ -149,3 +156,4 @@ public:
         return m_data;
     }
 };
+}

@@ -15,6 +15,7 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/backward/binders.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bit \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/alloc_traits.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/allocator.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.tcc \
@@ -22,6 +23,8 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/char_traits.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/charconv.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/chrono.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/concept_check.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/cpp_type_traits.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/cxxabi_forced.h \
@@ -29,6 +32,11 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/bits/exception.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/exception_defines.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/exception_ptr.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_dir.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_fwd.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_ops.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_path.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/functexcept.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/functional_hash.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/hash_bytes.h \
@@ -37,8 +45,11 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_conv.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.tcc \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets_nonio.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets_nonio.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/localefwd.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/memory_resource.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/memoryfwd.h \
@@ -47,12 +58,17 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/bits/new_allocator.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream_insert.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/parse_numbers.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/postypes.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/predefined_ops.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/ptr_traits.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/quoted_string.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/range_access.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/refwrap.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/std_abs.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algobase.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
@@ -68,6 +84,7 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf_iterator.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/string_view.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/stringfwd.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_ptr.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/utility.h \
@@ -75,27 +92,39 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/cctype \
   C:/msys64/ucrt64/include/c++/13.2.0/cerrno \
   C:/msys64/ucrt64/include/c++/13.2.0/clocale \
+  C:/msys64/ucrt64/include/c++/13.2.0/codecvt \
   C:/msys64/ucrt64/include/c++/13.2.0/cstddef \
+  C:/msys64/ucrt64/include/c++/13.2.0/cstdint \
   C:/msys64/ucrt64/include/c++/13.2.0/cstdio \
   C:/msys64/ucrt64/include/c++/13.2.0/cstdlib \
+  C:/msys64/ucrt64/include/c++/13.2.0/ctime \
   C:/msys64/ucrt64/include/c++/13.2.0/cwchar \
   C:/msys64/ucrt64/include/c++/13.2.0/cwctype \
   C:/msys64/ucrt64/include/c++/13.2.0/debug/assertions.h \
   C:/msys64/ucrt64/include/c++/13.2.0/debug/debug.h \
   C:/msys64/ucrt64/include/c++/13.2.0/exception \
+  C:/msys64/ucrt64/include/c++/13.2.0/ext/aligned_buffer.h \
   C:/msys64/ucrt64/include/c++/13.2.0/ext/alloc_traits.h \
   C:/msys64/ucrt64/include/c++/13.2.0/ext/atomicity.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/ext/concurrence.h \
   C:/msys64/ucrt64/include/c++/13.2.0/ext/numeric_traits.h \
   C:/msys64/ucrt64/include/c++/13.2.0/ext/string_conversions.h \
   C:/msys64/ucrt64/include/c++/13.2.0/ext/type_traits.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/filesystem \
+  C:/msys64/ucrt64/include/c++/13.2.0/fstream \
   C:/msys64/ucrt64/include/c++/13.2.0/initializer_list \
+  C:/msys64/ucrt64/include/c++/13.2.0/iomanip \
   C:/msys64/ucrt64/include/c++/13.2.0/ios \
   C:/msys64/ucrt64/include/c++/13.2.0/iosfwd \
   C:/msys64/ucrt64/include/c++/13.2.0/iostream \
   C:/msys64/ucrt64/include/c++/13.2.0/istream \
+  C:/msys64/ucrt64/include/c++/13.2.0/limits \
+  C:/msys64/ucrt64/include/c++/13.2.0/locale \
   C:/msys64/ucrt64/include/c++/13.2.0/new \
   C:/msys64/ucrt64/include/c++/13.2.0/ostream \
   C:/msys64/ucrt64/include/c++/13.2.0/pstl/pstl_config.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/ratio \
+  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
   C:/msys64/ucrt64/include/c++/13.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/13.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/13.2.0/streambuf \
@@ -107,8 +136,10 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/typeinfo \
   C:/msys64/ucrt64/include/c++/13.2.0/vector \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -116,7 +147,9 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/messages_members.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/time_members.h \
   C:/msys64/ucrt64/include/corecrt.h \
   C:/msys64/ucrt64/include/corecrt_startup.h \
   C:/msys64/ucrt64/include/corecrt_stdio_config.h \
@@ -140,6 +173,7 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/include/sec_api/wchar_s.h \
   C:/msys64/ucrt64/include/signal.h \
   C:/msys64/ucrt64/include/stddef.h \
+  C:/msys64/ucrt64/include/stdint.h \
   C:/msys64/ucrt64/include/stdio.h \
   C:/msys64/ucrt64/include/stdlib.h \
   C:/msys64/ucrt64/include/swprintf.inl \
@@ -152,12 +186,17 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
 
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/char_traits.h:
 
 C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT/src/main.cpp:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/parse_numbers.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/sstream:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.h:
 
@@ -191,6 +230,8 @@ C:/msys64/ucrt64/include/_mingw.h:
 
 C:/msys64/ucrt64/include/_mingw_mac.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_conv.h:
+
 C:/msys64/ucrt64/include/_mingw_secapi.h:
 
 C:/msys64/ucrt64/include/_mingw_stat64.h:
@@ -209,6 +250,10 @@ C:/msys64/ucrt64/include/c++/13.2.0/backward/binders.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/alloc_traits.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/bits/memoryfwd.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h:
+
 C:/msys64/ucrt64/include/c++/13.2.0/bits/allocator.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc:
@@ -217,15 +262,23 @@ C:/msys64/ucrt64/include/c++/13.2.0/bits/hash_bytes.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/charconv.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/bits/chrono.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_ops.h:
+
 C:/msys64/ucrt64/include/c++/13.2.0/cwchar:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/postypes.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets_nonio.h:
+
 C:/msys64/ucrt64/include/c++/13.2.0/bits/concept_check.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/functional_hash.h:
-
 C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/functional_hash.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/cpp_type_traits.h:
 
@@ -237,39 +290,47 @@ C:/msys64/ucrt64/include/c++/13.2.0/bits/exception.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/exception_defines.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator_base_funcs.h:
-
 C:/msys64/ucrt64/include/c++/13.2.0/bits/exception_ptr.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_dir.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc:
+
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/time_members.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_fwd.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_path.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/quoted_string.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:
+
 C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc:
+
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/nested_exception.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc:
-
-C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc:
-
 C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.tcc:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets_nonio.tcc:
 
 C:/msys64/ucrt64/include/c++/13.2.0/cctype:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/localefwd.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator.h:
-
-C:/msys64/ucrt64/include/c++/13.2.0/bits/memory_resource.h:
-
 C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algobase.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/memoryfwd.h:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/memory_resource.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/error_constants.h:
 
@@ -279,27 +340,39 @@ C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream_insert.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/predefined_ops.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/exception:
-
-C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_pair.h:
-
 C:/msys64/ucrt64/include/c++/13.2.0/bits/ptr_traits.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/refwrap.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/std_abs.h:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_function.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf.tcc:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/std_abs.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_construct.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator_base_funcs.h:
+
 C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator_base_types.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/exception:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_pair.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf.tcc:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf_iterator.h:
 
@@ -307,7 +380,11 @@ C:/msys64/ucrt64/include/c++/13.2.0/bits/string_view.tcc:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/stringfwd.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_ptr.h:
+
 C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator.h:
+
+C:/msys64/ucrt64/include/stdint.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h:
 
@@ -327,19 +404,31 @@ C:/msys64/ucrt64/include/c++/13.2.0/cwctype:
 
 C:/msys64/ucrt64/include/c++/13.2.0/clocale:
 
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/codecvt:
+
 C:/msys64/ucrt64/include/c++/13.2.0/cstddef:
+
+C:/msys64/ucrt64/include/c++/13.2.0/cstdint:
 
 C:/msys64/ucrt64/include/c++/13.2.0/cstdio:
 
 C:/msys64/ucrt64/include/c++/13.2.0/cstdlib:
 
+C:/msys64/ucrt64/include/c++/13.2.0/ctime:
+
 C:/msys64/ucrt64/include/c++/13.2.0/debug/assertions.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/debug/debug.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/ext/aligned_buffer.h:
+
 C:/msys64/ucrt64/include/c++/13.2.0/ext/alloc_traits.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/ext/atomicity.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/ext/concurrence.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/ext/numeric_traits.h:
 
@@ -347,7 +436,15 @@ C:/msys64/ucrt64/include/c++/13.2.0/ext/string_conversions.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/ext/type_traits.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/filesystem:
+
+C:/msys64/ucrt64/include/c++/13.2.0/fstream:
+
 C:/msys64/ucrt64/include/c++/13.2.0/initializer_list:
+
+C:/msys64/ucrt64/include/corecrt.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/iomanip:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h:
 
@@ -359,11 +456,17 @@ C:/msys64/ucrt64/include/c++/13.2.0/iostream:
 
 C:/msys64/ucrt64/include/c++/13.2.0/istream:
 
+C:/msys64/ucrt64/include/c++/13.2.0/limits:
+
+C:/msys64/ucrt64/include/c++/13.2.0/locale:
+
 C:/msys64/ucrt64/include/c++/13.2.0/new:
 
 C:/msys64/ucrt64/include/c++/13.2.0/ostream:
 
 C:/msys64/ucrt64/include/c++/13.2.0/pstl/pstl_config.h:
+
+C:/msys64/ucrt64/include/c++/13.2.0/ratio:
 
 C:/msys64/ucrt64/include/c++/13.2.0/stdexcept:
 
@@ -387,19 +490,19 @@ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++allocator.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h:
 
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h:
+
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_base.h:
 
-C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h:
-
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h:
 
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:
 
-C:/msys64/ucrt64/include/corecrt.h:
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/messages_members.h:
 
 C:/msys64/ucrt64/include/corecrt_stdio_config.h:
 
@@ -458,3 +561,5 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h:
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h:
