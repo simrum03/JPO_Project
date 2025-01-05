@@ -1,3 +1,0 @@
-C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT/build/CMakeFiles/main.dir
-C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT/build/CMakeFiles/edit_cache.dir
-C:/Users/szymo/OneDrive/Pulpit/JPO_PROJECT/build/CMakeFiles/rebuild_cache.dir
