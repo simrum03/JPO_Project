@@ -31,7 +31,8 @@ public:
         std::ofstream outFile(filename, append ? std::ios::app : std::ios::out);
         if (outFile.is_open()) {
             if (append && !label.empty()) {
-                outFile << "----- " << label << " -----" << std::endl;
+                std::string labelLine = "----- " + label + " -----";
+                outFile << labelLine << std::endl;
             }
 
             outFile << "Encryption Details:" << std::endl;
@@ -41,7 +42,9 @@ public:
             outFile << data << std::endl;
 
             if (append && !label.empty()) {
-                outFile << "--------------------" << std::endl;
+                std::string labelLine = "----- " + label + " -----";
+                std::string separator(labelLine.size(), '-');
+                outFile << separator << std::endl;
             }
             outFile.close();
             std::cout << "Data has been " << (append ? "appended to " : "saved to ") << filename << std::endl;
