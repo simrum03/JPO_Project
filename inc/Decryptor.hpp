@@ -34,7 +34,7 @@ public:
                 outFile << labelLine << std::endl;
             }
 
-            outFile << "Encryption Details:" << std::endl;
+            outFile << "Decryption Details:" << std::endl;
             outFile << description();
             
             

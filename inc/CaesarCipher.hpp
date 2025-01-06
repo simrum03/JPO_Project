@@ -15,7 +15,12 @@ public:
     ~CaesarEncryptor() {}
 
     void setShift(int shift) {
-        m_shift = shift;
+        if (shift >= 0) {
+            m_shift = shift;
+        }
+        else {
+            std::cout << "Incorrect shift." << std::endl;
+        }
     }
 
     int getShift() {
@@ -59,7 +64,12 @@ public:
     ~CaesarDecryptor() {}
 
     void setShift(int shift) {
-        m_shift = shift;
+        if (shift >= 0) {
+            m_shift = shift;
+        }
+        else {
+            std::cout << "Incorrect shift." << std::endl;
+        }
     }
 
     int getShift() {

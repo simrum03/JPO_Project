@@ -5,6 +5,15 @@
 #include "../inc/CaesarCipher.hpp"
 #include "../inc/RailFenceCipher.hpp"
 
+bool isInteger(const std::string& str) {
+    for (char c : str) {
+        if (!isdigit(c) && c != '-' && c != '+') {
+            return false;
+        }
+    }
+    return true;
+}
+
 void deleteFile(const std::string& filename) {
     if (std::filesystem::exists(filename)) {
         std::filesystem::remove(filename);
@@ -48,8 +57,20 @@ int main() {
                 if (algorithm == "c") {
                     sr::CaesarEncryptor caesar;
                     int shift{};
+                    std::string input;
+
+                while (true) {
                     std::cout << "Enter shift: ";
-                    std::cin >> shift;
+                    std::cin >> input;
+
+                    if (isInteger(input)) {
+                        shift = std::stoi(input);
+                        break;
+                    } 
+                    else {
+                        std::cout << "Incorrect input. Try again" << std::endl;
+                    }
+                }
 
                     caesar.setShift(shift);
 
@@ -74,7 +95,7 @@ int main() {
                     std::cout << "What do you want to do with your data?" << std::endl
                               << "1 - Save data to file" << std::endl
                               << "2 - Append data to existing file" << std::endl
-                              << "3 - Delete a file" << std::endl
+                              << "3 - Nothing, quit program." << std::endl
                               << "Enter your choice: ";
                     std::cin >> choice;
 
@@ -125,6 +146,10 @@ int main() {
                             std::cerr << "Error: File " << filename << " does not exist." << std::endl;
                         }
                     }
+                    else if (choice == "3"){
+                        std::cout << "Quitting..." << std::endl;
+                        return 0;                        
+                    }
                     else {
                         std::cout << "Incorrect option." << std::endl;
                     }
@@ -133,8 +158,21 @@ int main() {
                 else if (algorithm == "r") {
                     sr::RailFenceEncryptor railfence;
                     int rails{};
-                    std::cout << "Enter number of rails: ";
-                    std::cin >> rails;
+                    std::string input;
+
+                    while (true) {
+                        std::cout << "Enter number of rails: ";
+                        std::cin >> input;
+
+                        if (isInteger(input)) {
+                            rails = std::stoi(input);
+                            break;
+                        } 
+                        else {
+                            std::cout << "Incorrect input. Try again" << std::endl;
+                        }
+                    }
+
                     railfence.setRails(rails);
 
                     std::cout << "Enter data you would like to encrypt (type 'stop' to finish):" << std::endl;
@@ -158,7 +196,7 @@ int main() {
                     std::cout << "What do you want to do with your data?" << std::endl
                               << "1 - Save data to file" << std::endl
                               << "2 - Append data to existing file" << std::endl
-                              << "3 - Delete a file" << std::endl
+                              << "3 - Nothing, quit program." << std::endl
                               << "Enter your choice: ";
                     std::cin >> choice;
 
@@ -208,6 +246,10 @@ int main() {
                         else {
                             std::cerr << "Error: File " << filename << " does not exist." << std::endl;
                         }
+                    }
+                    else if (choice == "3"){
+                        std::cout << "Quitting..." << std::endl;
+                        return 0;                        
                     }
                     else {
                         std::cout << "Incorrect option." << std::endl;
@@ -243,11 +285,22 @@ int main() {
                 if (algorithm == "c") {
                     sr::CaesarDecryptor caesar;
                     int shift{};
-                    std::cout << "Enter shift: ";
-                    std::cin >> shift;
+                    std::string input;
+
+                    while (true) {
+                        std::cout << "Enter shift: ";
+                        std::cin >> input;
+
+                        if (isInteger(input)) {
+                            shift = std::stoi(input);
+                            break;
+                        } 
+                        else {
+                            std::cout << "Incorrect input. Try again" << std::endl;
+                        }
+                    }
 
                     caesar.setShift(shift);
-                    caesar.description();
 
                     std::cout << "Enter data you would like to decrypt (type 'stop' to finish):" << std::endl;
 
@@ -270,7 +323,7 @@ int main() {
                     std::cout << "What do you want to do with your data?" << std::endl
                               << "1 - Save data to file" << std::endl
                               << "2 - Append data to existing file" << std::endl
-                              << "3 - Delete a file" << std::endl
+                              << "3 - Nothing, quit program." << std::endl
                               << "Enter your choice: ";
                     std::cin >> choice;
 
@@ -321,6 +374,10 @@ int main() {
                             std::cerr << "Error: File " << filename << " does not exist." << std::endl;
                         }
                     }
+                    else if (choice == "3"){
+                        std::cout << "Quitting..." << std::endl;
+                        return 0;                        
+                    }
                     else {
                         std::cout << "Incorrect option." << std::endl;
                     }                    
@@ -329,11 +386,21 @@ int main() {
                 else if (algorithm == "r") {
                     sr::RailFenceDecryptor railfence;
                     int rails{};
-                    std::cout << "Enter number of rails: ";
-                    std::cin >> rails;
+                    std::string input;
 
+                    while (true) {
+                        std::cout << "Enter number of rails: ";
+                        std::cin >> input;
+
+                        if (isInteger(input)) {
+                            rails = std::stoi(input);
+                            break;
+                        } 
+                        else {
+                            std::cout << "Incorrect input. Try again" << std::endl;
+                        }
+                    }
                     railfence.setRails(rails);
-                    railfence.description();
 
                     std::cout << "Enter data you would like to decrypt (type 'stop' to finish):" << std::endl;
 
@@ -356,7 +423,7 @@ int main() {
                     std::cout << "What do you want to do with your data?" << std::endl
                               << "1 - Save data to file" << std::endl
                               << "2 - Append data to existing file" << std::endl
-                              << "3 - Delete a file" << std::endl
+                              << "3 - Nothing, quit program." << std::endl
                               << "Enter your choice: ";
                     std::cin >> choice;
 
@@ -406,6 +473,10 @@ int main() {
                         else {
                             std::cerr << "Error: File " << filename << " does not exist." << std::endl;
                         }
+                    }
+                    else if (choice == "3"){
+                        std::cout << "Quitting..." << std::endl;
+                        return 0;                        
                     }
                     else {
                         std::cout << "Incorrect option." << std::endl;

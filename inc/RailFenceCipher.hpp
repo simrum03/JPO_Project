@@ -16,9 +16,13 @@ public:
     ~RailFenceEncryptor() {}
 
     void setRails(int rails){
-        m_rails = rails;
+        if (rails >= 0) {
+            m_rails = rails;
+        }
+        else {
+            std::cout << "Incorrect number of rails." << std::endl;
+        }
     }
-
     int getRails(){
         return m_rails;
     }
@@ -78,7 +82,12 @@ public:
     ~RailFenceDecryptor() {}
 
     void setRails(int rails){
-        m_rails = rails;
+        if (rails >= 0) {
+            m_rails = rails;
+        }
+        else {
+            std::cout << "Incorrect number of rails." << std::endl;
+        }
     }
 
     int getRails(){
