@@ -8,4 +8,10 @@ include_directories(${PROJECT_SOURCE_DIR}/inc)
 
 file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
-add_executable(main ${SOURCES})
+add_executable(main 
+    src/main.cpp
+    src/CaesarCipher.cpp
+    src/Encryptor.cpp
+    src/Decryptor.cpp
+    src/RailFenceCipher.cpp
+)

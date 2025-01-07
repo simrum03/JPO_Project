@@ -2,61 +2,92 @@
 
 #include <iostream>
 #include <string>
-#include <fstream>
 
 namespace sr{
+
+/**
+ * @class Encryptor
+ * @brief Abstract base class for encryption algorithms.
+ *
+ * The "Encryptor" class provides a framework for implementing different
+ * encryption algorithms. Derived classes must implement the pure virtual
+ * functions "description" and `encrypt".
+ */
+
 class Encryptor {
 protected:
-    std::string m_algorithm;
-    std::string m_data;
+    std::string m_algorithm; ///< Name of the encryption algorithm.
+    std::string m_data; ///< Data to be encrypted.
 
 public:
-    Encryptor() : m_algorithm(""), m_data("") {}
-    Encryptor(const std::string &name, const std::string &data = "") : m_algorithm(name), m_data(data) {}
+    /**
+     * @brief Default constructor.
+     *
+     * Initializes the algorithm name and data to empty strings.
+     */
+    Encryptor();
 
-    virtual ~Encryptor() {}
+    /**
+     * @brief Parameterized constructor.
+     *
+     * @param name Name of the encryption algorithm.
+     * @param data Initial data to be encrypted (default is an empty string).
+     */
+    Encryptor(const std::string &name, const std::string &data = "");
 
-    void addData (const std::string &data) {
-        m_data += data;
-    }
+    /**
+     * @brief Virtual destructor.
+     */
+    virtual ~Encryptor() = default;
 
-    const std::string getData() const {
-        return m_data;
-    }
 
+    /**
+     * @brief Adds data to the encryption buffer.
+     *
+     * @param data Data to be added to the buffer.
+     */
+    void addData (const std::string &data);
+
+    /**
+     * @brief Retrieves the encrypted or unencrypted data.
+     *
+     * @return A string containing the data.
+     */
+    const std::string getData() const;
+
+    /**
+     * @brief Provides a description of the encryption algorithm.
+     *
+     * Derived classes must implement this function to return a textual
+     * description of the algorithm.
+     *
+     * @return A string describing the encryption algorithm.
+     */
     virtual std::string description() const  = 0;
+
+    /**
+     * @brief Performs the encryption process.
+     *
+     * Derived classes must implement this function to perform the encryption
+     * on the stored data.
+     *
+     * @return The encrypted data as a string.
+     */    
     virtual std::string encrypt() = 0;
 
-    void writeToFile(const std::string& filename, const std::string& data, const std::string& label = "", bool append = false) const {
-        std::ofstream outFile(filename, append ? std::ios::app : std::ios::out);
-        if (outFile.is_open()) {
-            if (append && !label.empty()) {
-                std::string labelLine = "----- " + label + " -----";
-                outFile << labelLine << std::endl;
-            }
+    /**
+     * @brief Writes encrypted data to a file.
+     *
+     * @param filename Name of the file to write to.
+     * @param data Data to be written to the file.
+     * @param label Optional label to prepend to the data (default is an empty string).
+     * @param append If true, data is appended to the file; otherwise, the file is overwritten (default is false).
+     */
+    void writeToFile(const std::string& filename, const std::string& data, const std::string& label = "", bool append = false) const;
 
-            outFile << "Encryption Details:" << std::endl;
-            outFile << description();
-            
-            
-            outFile << data << std::endl;
-
-            if (append && !label.empty()) {
-                std::string labelLine = "----- " + label + " -----";
-                std::string separator(labelLine.size(), '-');
-                outFile << separator << std::endl;
-            }
-            outFile.close();
-            std::cout << "Data has been " << (append ? "appended to " : "saved to ") << filename << std::endl;
-        } 
-        else 
-        {
-            std::cerr << "Error: Could not open file " << filename << " for writing." << std::endl;
-        }
-    }
-
-    void clearData() {
-        m_data.clear();
-    }
+    /**
+     * @brief Clears all data stored in the buffer.
+     */
+    void clearData();
 };
 }

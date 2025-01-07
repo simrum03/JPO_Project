@@ -4,58 +4,90 @@
 #include <string>
 
 namespace sr{
+
+/**
+ * @class Decryptor
+ * @brief Abstract base class for decryption algorithms.
+ *
+ * The `Decryptor` class provides a framework for implementing different
+ * decryption algorithms. Derived classes must implement the pure virtual
+ * functions `description` and `decrypt`.
+ */
+
 class Decryptor {
 protected:
-    std::string m_algorithm;
-    std::string m_data;
+    std::string m_algorithm; ///< Name of the decryption algorithm.
+    std::string m_data; ///< Data to be decrypted.
 
 public:
-    Decryptor() : m_algorithm(""), m_data("") {}
-    Decryptor(const std::string &name, const std::string &data = "") : m_algorithm(name), m_data(data) {}
 
-    virtual ~Decryptor() {}
+    /**
+     * @brief Default constructor.
+     *
+     * Initializes the algorithm name and data to empty strings.
+     */
+    Decryptor();
 
-    void addData (const std::string &data) {
-        m_data += data;
-    }
+    /**
+     * @brief Parameterized constructor.
+     *
+     * @param name Name of the decryption algorithm.
+     * @param data Initial data to be decrypted (default is an empty string).
+     */
+    Decryptor(const std::string &name, const std::string &data = "");
 
-    const std::string getData() const {
-        return m_data;
-    }
+    /**
+     * @brief Virtual destructor.
+     */
+    virtual ~Decryptor() = default;
 
+    /**
+     * @brief Adds data to the decryption buffer.
+     *
+     * @param data Data to be added to the buffer.
+     */
+    void addData (const std::string &data);
+
+    /**
+     * @brief Retrieves the decrypted or undecrypted data.
+     *
+     * @return A string containing the data.
+     */
+    const std::string getData() const;
+
+    /**
+     * @brief Provides a description of the decryption algorithm.
+     *
+     * Derived classes must implement this function to return a textual
+     * description of the algorithm.
+     *
+     * @return A string describing the decryption algorithm.
+     */
     virtual std::string description() const  = 0;
+
+    /**
+     * @brief Performs the decryption process.
+     *
+     * Derived classes must implement this function to perform the decryption
+     * on the stored data.
+     *
+     * @return The decrypted data as a string.
+     */
     virtual std::string decrypt() = 0;
 
-    void writeToFile(const std::string& filename, const std::string& data, const std::string& label = "", bool append = false) const {
-        std::ofstream outFile(filename, append ? std::ios::app : std::ios::out);
-        if (outFile.is_open()) {
-            if (append && !label.empty()) {
-                std::string labelLine = "----- " + label + " -----";
-                outFile << labelLine << std::endl;
-            }
+    /**
+     * @brief Writes decrypted data to a file.
+     *
+     * @param filename Name of the file to write to.
+     * @param data Data to be written to the file.
+     * @param label Optional label to prepend to the data (default is an empty string).
+     * @param append If true, data is appended to the file; otherwise, the file is overwritten (default is false).
+     */
+    void writeToFile(const std::string& filename, const std::string& data, const std::string& label = "", bool append = false) const;
 
-            outFile << "Decryption Details:" << std::endl;
-            outFile << description();
-            
-            
-            outFile << data << std::endl;
-
-            if (append && !label.empty()) {
-                std::string labelLine = "----- " + label + " -----";
-                std::string separator(labelLine.size(), '-');
-                outFile << separator << std::endl;
-            }
-            outFile.close();
-            std::cout << "Data has been " << (append ? "appended to " : "saved to ") << filename << std::endl;
-        } 
-        else 
-        {
-            std::cerr << "Error: Could not open file " << filename << " for writing." << std::endl;
-        }
-    }
-
-    void clearData() {
-        m_data.clear();
-    }
+    /**
+     * @brief Clears all data stored in the buffer.
+     */
+    void clearData();
 };
 }
