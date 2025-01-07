@@ -9,9 +9,9 @@ namespace sr{
  * @class Decryptor
  * @brief Abstract base class for decryption algorithms.
  *
- * The `Decryptor` class provides a framework for implementing different
+ * The Decryptor class provides a framework for implementing different
  * decryption algorithms. Derived classes must implement the pure virtual
- * functions `description` and `decrypt`.
+ * functions description and decrypt.
  */
 
 class Decryptor {

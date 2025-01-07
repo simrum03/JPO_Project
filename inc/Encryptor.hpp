@@ -9,9 +9,9 @@ namespace sr{
  * @class Encryptor
  * @brief Abstract base class for encryption algorithms.
  *
- * The "Encryptor" class provides a framework for implementing different
+ * The Encryptor class provides a framework for implementing different
  * encryption algorithms. Derived classes must implement the pure virtual
- * functions "description" and `encrypt".
+ * functions description and encrypt.
  */
 
 class Encryptor {
