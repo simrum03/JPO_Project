@@ -13,7 +13,6 @@ namespace sr{
  * encryption algorithms. Derived classes must implement the pure virtual
  * functions description and encrypt.
  */
-
 class Encryptor {
 protected:
     std::string m_algorithm; ///< Name of the encryption algorithm.

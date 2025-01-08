@@ -1,12 +1,9 @@
 #include <iostream>
-#include <fstream>
-#include <filesystem>
-
-#include "../inc/Menu.hpp"
+#include "Menu.hpp"
 
 int main() {
 
-    sr::MenuHandler menu;
+    sr::Menu menu;
     menu.run();
 
     return 0;

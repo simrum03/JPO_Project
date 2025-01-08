@@ -13,14 +13,12 @@ namespace sr{
  * decryption algorithms. Derived classes must implement the pure virtual
  * functions description and decrypt.
  */
-
 class Decryptor {
 protected:
     std::string m_algorithm; ///< Name of the decryption algorithm.
     std::string m_data; ///< Data to be decrypted.
 
 public:
-
     /**
      * @brief Default constructor.
      *

@@ -14,4 +14,5 @@ add_executable(main
     src/Encryptor.cpp
     src/Decryptor.cpp
     src/RailFenceCipher.cpp
+    src/Menu.cpp
 )
