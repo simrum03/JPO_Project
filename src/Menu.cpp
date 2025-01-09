@@ -18,14 +18,18 @@ namespace sr{
 
             if (option == "1") {
                 handleEncryption();
-            } else if (option == "2") {
+            } 
+            else if (option == "2") {
                 handleDecryption();
-            } else if (option == "3") {
+            } 
+            else if (option == "3") {
                 handleFileDeletion();
-            } else if (option == "4") {
+            } 
+            else if (option == "4") {
                 std::cout << "Quitting..." << std::endl;
                 break;
-            } else {
+            } 
+            else {
                 std::cout << "Invalid option. Try again." << std::endl;
             }
             std::cout << std::endl;
@@ -41,11 +45,13 @@ namespace sr{
     }
 
     void Menu::showMainMenu() const {
-        std::cout << "Hello! Choose your option:" << std::endl 
+        std::cout << "---------------------" << std::endl
+                  << "Menu:" << std::endl 
                   << "1 - Encrypting" << std::endl
                   << "2 - Decrypting" << std::endl
                   << "3 - Delete a file" << std::endl
                   << "4 - Quit program" << std::endl
+                  << "---------------------" << std::endl
                   << "Enter your choice: ";
     }
 
@@ -61,11 +67,14 @@ namespace sr{
 
             if (algorithm == "c") {
                 handleCaesarEncryption();
-            } else if (algorithm == "r") {
+            } 
+            else if (algorithm == "r") {
                 handleRailFenceEncryption();
-            } else if (algorithm == "b") {
+            } 
+            else if (algorithm == "b") {
                 break;
-            } else {
+            } 
+            else {
                 std::cout << "Invalid choice. Try again." << std::endl;
             }
 
@@ -90,11 +99,14 @@ namespace sr{
 
             if (algorithm == "c") {
                 handleCaesarDecryption();
-            } else if (algorithm == "r") {
+            } 
+            else if (algorithm == "r") {
                 handleRailFenceDecryption();
-            } else if (algorithm == "b") {
+            } 
+            else if (algorithm == "b") {
                 break;
-            } else {
+            } 
+            else {
                 std::cout << "Invalid choice. Try again." << std::endl;
             }
 
@@ -189,11 +201,16 @@ namespace sr{
     }
 
     void Menu::deleteFile(const std::string& filename) {
-        if (std::filesystem::exists(filename)) {
-            std::filesystem::remove(filename);
-            std::cout << "File " << filename << " has been deleted." << std::endl;
-        } else {
-            std::cerr << "Error: File " << filename << " does not exist." << std::endl;
+        try {
+            if (std::filesystem::remove(filename)) {
+                std::cout << "File " << filename << " has been deleted." << std::endl;
+            } 
+            else {
+                std::cerr << "Error: File " << filename << " does not exist." << std::endl;
+            }
+        } 
+        catch (const std::filesystem::filesystem_error& e) {
+            std::cerr << "Filesystem error: " << e.what() << std::endl;
         }
     }
 
@@ -202,7 +219,7 @@ namespace sr{
         while (true) {
             std::cout << prompt;
             std::cin >> input;
-            if (isInteger(input)) {
+            if (isInteger(input) && std::stoi(input) >= 0) {
                 return std::stoi(input);
             }
             std::cout << "Incorrect input. Try again." << std::endl;
@@ -215,7 +232,6 @@ namespace sr{
         while (true) {
             std::getline(std::cin, line);
             if (line == "stop") {
-                std::cout << "\033[A\033[2K";
                 break;
             }
             data += line;
@@ -249,9 +265,11 @@ namespace sr{
             }
 
             encryptor.writeToFile(m_filename, encryptor.getData(), label, append);
-        } else if (choice == "3") {
+        } 
+        else if (choice == "3") {
             std::cout << "No changes made." << std::endl;
-        } else {
+        } 
+        else {
             std::cout << "Invalid choice." << std::endl;
         }
     }
@@ -278,9 +296,11 @@ namespace sr{
             }
 
             decryptor.writeToFile(m_filename, decryptor.getData(), label, append);
-        } else if (choice == "3") {
+        } 
+        else if (choice == "3") {
             std::cout << "No changes made." << std::endl;
-        } else {
+        } 
+        else {
             std::cout << "Invalid choice." << std::endl;
         }
     }
