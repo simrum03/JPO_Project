@@ -61,5 +61,3 @@ After running the program, you'll see a menu with the following options:
 2. Decrypting: Similar to encryption, but reverses the operation to retrieve the original data.
 3. Delete a file: Allows you to remove an existing file.
 4. Quit program: Exits the application.
-
----
