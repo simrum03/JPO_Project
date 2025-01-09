@@ -55,9 +55,41 @@ Make sure you have the following tools installed:
 
 ## Example Usage
 
-After running the program, you'll see a menu with the following options:
+```
+---------------------
+Menu:
+1 - Encrypting       
+2 - Decrypting       
+3 - Delete a file    
+4 - Quit program
+---------------------
+Enter your choice: 1
+Encrypting selected. Choose an algorithm:
+c - Caesar cipher
+r - Rail fence cipher
+b - Back to main menu
+Enter your algorithm choice: c
+Enter shift: 4
+Enter data you would like to encrypt (type 'stop' to finish):
+hello world
+stop
+Encrypted data: lipps asvph
+What do you want to do with your encrypted data?
+1 - Save data to a new file
+2 - Append data to an existing file
+3 - Do nothing
+Enter your choice: 1
+Enter filename: test.txt
+Data has been saved to test.txt
+Do you want to continue encrypting? (y/n): n
 
-1. Encrypting: Choose an encryption algorithm (Caesar Cipher or Rail Fence Cipher), provide the required inputs, and view the encrypted data. You can save or append the result to a file.
-2. Decrypting: Similar to encryption, but reverses the operation to retrieve the original data.
-3. Delete a file: Allows you to remove an existing file.
-4. Quit program: Exits the application.
+---------------------
+Menu:
+1 - Encrypting
+2 - Decrypting
+3 - Delete a file
+4 - Quit program
+---------------------
+Enter your choice: 4
+Quitting...
+```
